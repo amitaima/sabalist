@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 
 .container {
@@ -58,4 +59,52 @@ body {
   padding-bottom: 5px;
   max-width: 70px;
   max-height: 70px;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      height: 100vh;
+      width: 100vw;
+      position: relative;
+    }
+
+    
+    .container > div {
+      text-align: center;
+      overflow: auto;
+      top: 0;
+      width: 100%;
+      height: 33.3%;
+      margin-bottom: 30px;
+      position: absolute;
+      overflow-x: auto;
+      overflow-y: hidden;
+      white-space: nowrap;
+    }
+
+    .title {
+      padding: 10px 0 0 5px;
+    }
+
+    .employee {
+      padding: 15px;
+      display: inline-block;
+    }
+
+    .employee > .photo, .employee > .name {
+      display: inline-block;
+    }
+
+    .employee > .photo, .employee > .photo > img {
+      display: block;
+      padding-bottom: 5px;
+      max-width: 70px;
+      max-height: 70px;
+    }
 }
