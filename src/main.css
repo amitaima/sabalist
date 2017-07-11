@@ -1,0 +1,61 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+}
+
+.container > :nth-child(-n+2) {
+  width: calc(50% - 2px);
+  height: 80%;
+  border: 1px solid #000;
+  display: inline-block;
+  text-align: center;
+}
+
+.container > :nth-child(2) {
+  position: absolute;
+}
+
+.container > div {
+  text-align: center;
+  overflow: auto;
+}
+
+.container > :nth-child(2) {
+  clear: both;
+  float: right;
+}
+
+.container > :last-child {
+  bottom: 0;
+  width: 100%;
+  height: 20%;
+  position: absolute;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+.title {
+  padding: 10px 0 0 5px;
+}
+
+.employee {
+  padding: 15px;
+  display: inline-block;
+}
+
+.employee > .photo, .employee > .name {
+  display: inline-block;
+}
+
+.employee > .photo, .employee > .photo > img {
+  display: block;
+  padding-bottom: 5px;
+  max-width: 70px;
+  max-height: 70px;
+}
