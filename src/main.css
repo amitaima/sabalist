@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  background: white;
 }
 
 .container {
@@ -15,11 +16,22 @@ body {
 }
 
 .title {
-  padding: 10px 0 0 5px;
+  padding: 10px 0 8px 5px;
+  border-bottom: 1px solid grey;
+  box-shadow: 0px 0px 2px 0px;
+  background: #f5f5f0;
+  width: 50%;
+  position: fixed;
+  border-right: 1px solid black;
 }
 
+.firstEmploee {
+  margin-top: 35px;
+}
+
+
 .employee {
-  padding: 15px;
+  padding: 15px 10px 15px 10px;
   display: inline-block;
 }
 
@@ -30,21 +42,37 @@ body {
 .employee > .photo, .employee > .photo > img {
   display: block;
   padding-bottom: 5px;
-  max-width: 70px;
-  max-height: 70px;
+  max-width: 100px;
+  max-height: 100px;
+}
+
+#lastTitle {
+      padding: 10px 0 8px 5px;
+      border-bottom: 1px solid grey;
+      box-shadow: 0px 0px 2px 0px;
+      background: #f5f5f0;
+      position: fixed;
+      width: 100%;
+      text-align: center;
+  }
+
+.lastEmploee {
+  margin-top: 40px;
 }
 
 @media only screen and (min-width: 768px) {
   .container > :nth-child(-n+2) {
     width: calc(50% - 2px);
-    height: 80%;
+    height: 70%;
     border: 1px solid #000;
     display: inline-block;
     text-align: center;
+    overflow-x: hidden;
   }
 
   .container > :nth-child(2) {
     position: absolute;
+
   }
 
   .container > :nth-child(2) {
@@ -55,12 +83,14 @@ body {
   .container > :last-child {
     bottom: 0;
     width: 100%;
-    height: 20%;
+    height: 30%;
     position: absolute;
     overflow-x: auto;
     overflow-y: hidden;
     white-space: nowrap;
   }
+
+
 }
 
 @media only screen and (max-width: 767px) {
@@ -77,9 +107,16 @@ body {
   .container > :nth-child(1),
   .container > :nth-child(2) {
     border-bottom: 1px solid #000;
+
+  }
+
+  .title {
+    position: absolute;
+    width: 100%;
+    text-align: center; 
   }
 
   .employee {
-    margin-top: 15px;
+    margin-top: 16%;
   }
 }
