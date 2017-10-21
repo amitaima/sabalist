@@ -25,14 +25,13 @@ body {
   border-right: 1px solid black;
 }
 
-.firstEmploee {
-  margin-top: 35px;
-}
-
-
 .employee {
   padding: 15px 10px 15px 10px;
   display: inline-block;
+}
+
+.employee:first-child {
+  margin-top: 35px;
 }
 
 .employee > .photo, .employee > .name {
@@ -55,10 +54,6 @@ body {
       width: 100%;
       text-align: center;
   }
-
-.lastEmploee {
-  margin-top: 40px;
-}
 
 @media only screen and (min-width: 768px) {
   .container > :nth-child(-n+2) {
