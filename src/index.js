@@ -1,4 +1,6 @@
 import './main.css'
+const fs = require('fs')
+const readline = require('readline');
 
 const addWorker = function addWorker(name = '', photo = '', state = '') {
   const states = ['late', 'missing', 'onBreak'];
@@ -41,5 +43,17 @@ const addWorker = function addWorker(name = '', photo = '', state = '') {
   // append employee to employees
   employees.appendChild(employee);
 };
+
+
+var rd = readline.createInterface({
+    input: fs.createReadStream('../listTestFile.txt'),
+    output: process.stdout,
+    console: false
+});
+
+rd.on('line', function(line) {
+    const eachPiece = line.split(" ");
+    console.log("First piece of the line: " + eachPiece);
+});
 
 addWorker('John Doe', 'https://media.giphy.com/media/EsmlrgWNx5v0Y/giphy.gif', 'late');
